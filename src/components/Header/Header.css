@@ -1,0 +1,204 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e5e7eb;
+    transition: all .3s ease;
+}
+
+.header.scrolled {
+    box-shadow: 0 8px 30px rgba(0,0,0,.06);
+}
+
+.header-container {
+    max-width: 1320px;
+    margin: auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Logo */
+.logo img {
+    height: 90px;
+}
+
+/* NAV */
+/* NAV */
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* MAIN MENU */
+.nav-main {
+    display: flex;
+    gap: 32px;
+    flex-wrap: nowrap;
+}
+
+.nav-main a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1f2937;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-main a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1.5px;
+    background: #0d6efd;
+    transition: width .3s ease;
+}
+
+.nav-main a:hover::after,
+.nav-main a.active::after {
+    width: 100%;
+}
+
+.nav-main a.active {
+    color: #0d6efd;
+}
+
+/* EXTRA MENU */
+.nav-extra {
+    position: relative;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 18px;
+    height: 2px;
+    background: #1f2937;
+}
+
+.menu-toggle.active {
+    background: #0d6efd;
+}
+
+.menu-toggle.active span {
+    background: #fff;
+}
+
+/* DROPDOWN */
+/* DROPDOWN – smooth animation */
+/* DROPDOWN – FIX CHỒNG CHÉO */
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 54px;
+    min-width: 220px;
+
+    background: #fff;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+
+    /* GIỮ CẤU TRÚC */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    /* TRẠNG THÁI ĐÓNG */
+    opacity: 0;
+    transform: translateY(-8px);
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
+}
+
+/* TRẠNG THÁI MỞ */
+.dropdown.open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.dropdown a {
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1f2937;
+    text-decoration: none;
+
+    opacity: 0;
+    transform: translateX(6px);
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease;
+}
+
+.dropdown.open a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* delay từng item */
+.dropdown.open a:nth-child(1) { transition-delay: .05s; }
+.dropdown.open a:nth-child(2) { transition-delay: .1s; }
+.dropdown.open a:nth-child(3) { transition-delay: .15s; }
+.dropdown.open a:nth-child(4) { transition-delay: .2s; }
+
+.dropdown a:hover {
+    background: #f1f5ff;
+    color: #0d6efd;
+}
+
+/* CTA */
+.dropdown a.contact {
+    margin-top: 6px;
+    background: #0d6efd;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+
+    transform: scale(0.96);
+}
+
+.dropdown.open a.contact {
+    transform: scale(1);
+}
+.dropdown a.contact:hover {
+    background: #0a4bad;
+}
+@media (max-width: 768px) {
+    .nav-main {
+        overflow-x: auto;
+        gap: 20px;
+        padding-bottom: 4px;
+    }
+
+    .nav-main::-webkit-scrollbar {
+        display: none;
+    }
+}
