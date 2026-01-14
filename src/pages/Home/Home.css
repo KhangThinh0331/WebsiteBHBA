@@ -301,12 +301,12 @@ h2{
 
     .prev-news,
     .prev-event {
-        left: 40%;
+        left: 35%;
     }
 
     .next-news,
     .next-event {
-        right: 40%;
+        right: 35%;
     }
     .partner-item img {
         max-height: 120px;
