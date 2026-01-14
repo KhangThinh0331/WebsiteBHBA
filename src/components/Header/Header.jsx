@@ -55,10 +55,22 @@ const Header = () => {
                         </button>
 
                         <div className={`dropdown ${open ? "open" : ""}`}>
+
+                            <div className="mobile-only">
+                                <NavLink to="/"><FaHome /> Trang chủ</NavLink>
+                                <NavLink to="/gioi-thieu"><FaInfoCircle /> Giới thiệu</NavLink>
+                                <NavLink to="/hoi-vien"><FaUsers /> Hội viên</NavLink>
+                                <NavLink to="/tin-tuc"><FaNewspaper /> Tin tức</NavLink>
+                                <NavLink to="/su-kien"><FaCalendarAlt /> Sự kiện</NavLink>
+
+                                <div className="divider"></div>
+                            </div>
+
                             <NavLink to="/xuc-tien"><FaChartLine /> Xúc tiến thương mại</NavLink>
                             <NavLink to="/tuyen-dung"><FaBriefcase /> Tuyển dụng</NavLink>
                             <NavLink to="/thu-vien"><FaImages /> Thư viện</NavLink>
                             <NavLink to="/lien-he" className="contact"><FaPhoneAlt /> Liên hệ</NavLink>
+
                         </div>
                     </div>
                 </nav>
