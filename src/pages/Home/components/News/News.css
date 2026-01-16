@@ -1,0 +1,125 @@
+.featured-news {
+    background: #ffffff;
+}
+
+.news-card {
+    background: #f8fafc;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    height: 380px;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-card h3 {
+    font-size: 17px;
+    margin: 14px 16px 8px;
+    color: #0f172a;
+}
+
+.news-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 16px 16px;
+    color: #475569;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-card a {
+    display: inline-block;
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: auto;
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: stretch;
+    height: auto;
+}
+
+.swiper-holder {
+    position: relative;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.25s ease;
+}
+
+.nav-btn i {
+    font-size: 16px;
+    color: #0d6efd;
+}
+
+.nav-btn:hover {
+    background: #0d6efd;
+}
+
+.nav-btn:hover i {
+    color: #fff;
+}
+
+/* vị trí */
+.prev-news {
+    left: -60px;
+}
+
+.next-news {
+    right: -60px;
+}
+
+@media (max-width: 768px) {
+    .swiper-holder {
+        padding-bottom: 56px;
+    }
+
+    .nav-btn {
+        top: auto;
+        bottom: 0;
+        transform: none;
+        width: 40px;
+        height: 40px;
+    }
+
+    .prev-news {
+        left: 35%;
+    }
+
+    .next-news {
+        right: 35%;
+    }
+}

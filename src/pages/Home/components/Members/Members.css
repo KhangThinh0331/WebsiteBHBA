@@ -1,0 +1,143 @@
+.members {
+    padding: 80px 0;
+    background: #f9fafb;
+}
+
+.member-slider {
+    position: relative;
+    padding: 40px 0;
+}
+
+.member-slide {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: .4s ease;
+    width: 100%;
+}
+
+.member-slide img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 18px;
+    filter: grayscale(40%) blur(1px);
+    opacity: .6;
+    transform: scale(.85);
+    transition: all .4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+/* SLIDE ACTIVE */
+.swiper-slide-active .member-slide img {
+    filter: none;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* SLIDE KỀ */
+.swiper-slide-prev .member-slide img,
+.swiper-slide-next .member-slide img {
+    opacity: .75;
+    transform: scale(.9);
+}
+
+/* OVERLAY */
+.member-overlay {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+
+    background: rgba(13,110,253,.9);
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+
+    opacity: 0;
+    transform: translate(-50%, 10px);
+    transition: all .3s ease;
+}
+
+.member-overlay h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.member-overlay span {
+    font-size: 12px;
+    opacity: .9;
+}
+
+/* HOVER CHỈ LOGO GIỮA */
+.swiper-slide-active .member-slide:hover .member-overlay {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.prev-members {
+    left: -60px;
+}
+
+.next-members {
+    right: -60px;
+}
+
+.prev-members:hover,
+.next-members:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 1024px) {
+    .member-slide {
+        padding-bottom: 56px;
+        margin-bottom: 40px;
+    }
+
+    .nav-btn {
+        top: auto;
+        bottom: 0;
+        transform: none;
+        width: 40px;
+        height: 40px;
+    }
+
+    .member-overlay {
+        opacity: 1;
+        background: linear-gradient(
+            to top,
+            rgba(0,0,0,.65),
+            transparent
+        );
+        justify-content: flex-end;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .member-slide:hover .member-overlay {
+        opacity: 1;
+    }
+
+    .swiper-slide {
+        opacity: 1 !important;
+        transform: scale(1) !important;
+    }
+
+    .member-slide img {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px){
+    .prev-members {
+        left: 35%;
+    }
+
+    .next-members {
+        right: 35%;
+    }
+}

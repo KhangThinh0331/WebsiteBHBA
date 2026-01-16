@@ -1,0 +1,138 @@
+.upcoming-events {
+    background: #f1f5f9;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-item {
+    display: flex;
+    gap: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.event-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.event-date {
+    background: #0d6efd;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    min-width: 70px;
+}
+
+.event-date span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.event-date small {
+    display: block;
+    font-size: 12px;
+}
+
+.event-info h3 {
+    margin-bottom: 6px;
+    color: #0f172a;
+}
+
+.event-info p {
+    color: #475569;
+}
+
+
+.swiper-slide {
+    display: flex;
+    align-items: stretch;
+    height: auto;
+}
+
+.swiper-holder {
+    position: relative;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.25s ease;
+}
+
+.nav-btn i {
+    font-size: 16px;
+    color: #0d6efd;
+}
+
+.nav-btn:hover {
+    background: #0d6efd;
+}
+
+.nav-btn:hover i {
+    color: #fff;
+}
+
+.prev-event {
+    left: -60px;
+}
+
+.next-event {
+    right: -60px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+
+    .event-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .event-date {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-holder {
+        padding-bottom: 56px;
+    }
+
+    .nav-btn {
+        top: auto;
+        bottom: 0;
+        transform: none;
+        width: 40px;
+        height: 40px;
+    }
+
+    .prev-event {
+        left: 35%;
+    }
+
+    .next-event {
+        right: 35%;
+    }
+}

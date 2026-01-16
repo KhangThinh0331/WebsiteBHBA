@@ -1,0 +1,33 @@
+.overview {
+    background: linear-gradient(135deg, #f8fbff, #eef5ff);
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.overview-text h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.overview-text p {
+    line-height: 1.7;
+    margin-bottom: 24px;
+    color: black;
+}
+
+.overview-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+@media (max-width: 992px) {
+    .overview-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
