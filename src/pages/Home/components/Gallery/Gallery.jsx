@@ -2,16 +2,16 @@ import "./Gallery.css";
 import { FaImages } from "react-icons/fa";
 
 const GalleryItems = [
-    { src: "/images/gallery1.JPG", alt: "Gallery Image 1" },
-    { src: "/images/gallery2.JPG", alt: "Gallery Image 2" },
-    { src: "/images/gallery3.JPG", alt: "Gallery Image 3" },
-    { src: "/images/gallery4.JPG", alt: "Gallery Image 4" },
-    { src: "/images/gallery5.JPG", alt: "Gallery Image 5" },
-    { src: "/images/gallery6.JPG", alt: "Gallery Image 6" },
-    { src: "/images/gallery7.JPG", alt: "Gallery Image 7" },
-    { src: "/images/gallery8.JPG", alt: "Gallery Image 8" },
-    { src: "/images/gallery9.JPG", alt: "Gallery Image 9" },
-    { src: "/images/gallery10.JPG", alt: "Gallery Image 10" },
+    { src: `${import.meta.env.BASE_URL}images/gallery1.JPG`, alt: "Gallery Image 1" },
+    { src: `${import.meta.env.BASE_URL}images/gallery2.JPG`, alt: "Gallery Image 2" },
+    { src: `${import.meta.env.BASE_URL}images/gallery3.JPG`, alt: "Gallery Image 3" },
+    { src: `${import.meta.env.BASE_URL}images/gallery4.JPG`, alt: "Gallery Image 4" },
+    { src: `${import.meta.env.BASE_URL}images/gallery5.JPG`, alt: "Gallery Image 5" },
+    { src: `${import.meta.env.BASE_URL}images/gallery6.JPG`, alt: "Gallery Image 6" },
+    { src: `${import.meta.env.BASE_URL}images/gallery7.JPG`, alt: "Gallery Image 7" },
+    { src: `${import.meta.env.BASE_URL}images/gallery8.JPG`, alt: "Gallery Image 8" },
+    { src: `${import.meta.env.BASE_URL}images/gallery9.JPG`, alt: "Gallery Image 9" },
+    { src: `${import.meta.env.BASE_URL}images/gallery10.JPG`, alt: "Gallery Image 10" },
 ];
 
 const Gallery = () => {
