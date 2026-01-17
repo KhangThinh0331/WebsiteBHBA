@@ -1,27 +1,17 @@
 import "./Gallery.css";
 import { FaImages } from "react-icons/fa";
-import gallery1 from "../../../../assets/images/gallery1.jpg";
-import gallery2 from "../../../../assets/images/gallery2.jpg";
-import gallery3 from "../../../../assets/images/gallery3.jpg";
-import gallery4 from "../../../../assets/images/gallery4.jpg";
-import gallery5 from "../../../../assets/images/gallery5.jpg";
-import gallery6 from "../../../../assets/images/gallery6.jpg";
-import gallery7 from "../../../../assets/images/gallery7.jpg";
-import gallery8 from "../../../../assets/images/gallery8.jpg";
-import gallery9 from "../../../../assets/images/gallery9.jpg";
-import gallery10 from "../../../../assets/images/gallery10.jpg";
 
 const GalleryItems = [
-    { src: gallery1, alt: "Gallery Image 1" },
-    { src: gallery2, alt: "Gallery Image 2" },
-    { src: gallery3, alt: "Gallery Image 3" },
-    { src: gallery4, alt: "Gallery Image 4" },
-    { src: gallery5, alt: "Gallery Image 5" },
-    { src: gallery6, alt: "Gallery Image 6" },
-    { src: gallery7, alt: "Gallery Image 7" },
-    { src: gallery8, alt: "Gallery Image 8" },
-    { src: gallery9, alt: "Gallery Image 9" },
-    { src: gallery10, alt: "Gallery Image 10" },
+    { src: "/images/gallery1.JPG", alt: "Gallery Image 1" },
+    { src: "/images/gallery2.JPG", alt: "Gallery Image 2" },
+    { src: "/images/gallery3.JPG", alt: "Gallery Image 3" },
+    { src: "/images/gallery4.JPG", alt: "Gallery Image 4" },
+    { src: "/images/gallery5.JPG", alt: "Gallery Image 5" },
+    { src: "/images/gallery6.JPG", alt: "Gallery Image 6" },
+    { src: "/images/gallery7.JPG", alt: "Gallery Image 7" },
+    { src: "/images/gallery8.JPG", alt: "Gallery Image 8" },
+    { src: "/images/gallery9.JPG", alt: "Gallery Image 9" },
+    { src: "/images/gallery10.JPG", alt: "Gallery Image 10" },
 ];
 
 const Gallery = () => {

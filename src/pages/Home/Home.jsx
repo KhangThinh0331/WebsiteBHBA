@@ -6,20 +6,11 @@ import Partners from "./components/Partners/Partners";
 import Carousel from "./components/Carousel/Carousel";
 import Members from "./components/Members/Members";
 import Trade from "./components/Trade/Trade";
-import Gallery from "./components/Gallery/Gallery";
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense } from "react";
+
+const Gallery = lazy(() => import("./components/Gallery/Gallery"));
 
 const Home = () => {
-    const [visible, setVisible] = useState(false);
-    const ref = useRef();
-
-    useEffect(() => {
-        const obs = new IntersectionObserver(
-            ([entry]) => entry.isIntersecting && setVisible(true),
-            { rootMargin: "200px" }
-        );
-        obs.observe(ref.current);
-    }, []);
     return (
         <div className="home">
             <Carousel />
@@ -32,9 +23,9 @@ const Home = () => {
             <Trade />
             {/* ===== Sự kiện ===== */}
             <Events />
-            <div ref={ref}>
-                {visible && <Gallery />}
-            </div>
+            <Suspense fallback={<div className="gallery-skeleton">Đang tải thư viện...</div>}>
+                <Gallery />
+            </Suspense>
             {/* ===== Đối tác ===== */}
             <Partners />
 
